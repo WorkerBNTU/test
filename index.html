@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #anim {
+      width: 200px;
+      height: 200px;
+      border-radius: 10%;
+      background-color: rgb(219, 255, 127);
+      animation-name: square-to-circle;
+      animation-duration: 3s;
+      animation-iteration-count: 3;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      /* animation-delay: 2s; */
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    #anim:hover {
+      animation-play-state: running;
+    }
+
+    @keyframes square-to-circle {
+      from {
+        border-radius: 10%;
+        background-color: aquamarine;
+      }
+      50% {
+        border-radius: 50% 50% 10% 10%;
+      }
+      to {
+        border-radius: 50%;
+        background-color: blueviolet;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Привет, мир<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        
-    </body>
-    </html></h1>
+  <div id="anim"></div>
 </body>
 </html>
